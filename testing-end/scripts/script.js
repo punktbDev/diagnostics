@@ -2,7 +2,7 @@
 (function () {
     // Если в ссылке указана ошибка "no-manager-id" со значением true, то выдает сообщение
     let URLParams = Object.fromEntries(new URLSearchParams(window.location.search))
-    if (URLParams["no-manager-id"]) {
+    if (URLParams["no-manager-id"] !== undefined) {
         $("#message").text("Вы перешли по неправильной ссылке! Актуальную ссылку на тестирование попросите у профориентолога!")
         return
     }
