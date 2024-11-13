@@ -10,7 +10,7 @@ document.title = "Интервью"
 let URLParams = Object.fromEntries(new URLSearchParams(window.location.search))
 // Если в строке нету значения manager-id или он не цифра или значение пустое
 if (!URLParams.hasOwnProperty("manager-id") || isNaN(URLParams["manager-id"]) || URLParams["manager-id"] === "") {
-    location.href = "/testing-end.html?no-manager-id=true"
+    location.href = "/testing-end.html?no-manager-id"
 }
 
 // Получем сохраненные данные о тестировании
