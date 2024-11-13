@@ -288,7 +288,7 @@ form.addEventListener('submit', (event) => {
 
 
 
-// Кпнока Начать тестирование в Правила
+// Кнопка Начать тестирование в Правила
 $("#submit-instruction").on("click tap", () => {
     $("#section-title").addClass("hidden")
     $("#section-instruction").addClass("hidden")
@@ -304,9 +304,9 @@ $("#submit-instruction").on("click tap", () => {
 
 
 // Автозаполнение открытого вопроса
-let questionsHashOpenAsnwer = localStorage.getItem("questionsHash_43ProfessionsOpenAnswer")
-if (questionsHashOpenAsnwer) {
-    $("#question-open-input").val(questionsHashOpenAsnwer)
+let questionsHashOpenAnswer = localStorage.getItem("questionsHash_43ProfessionsOpenAnswer")
+if (questionsHashOpenAnswer) {
+    $("#question-open-input").val(questionsHashOpenAnswer)
 }
 
 // Включаем кнопку "Завершить" если написан открытый ответ
