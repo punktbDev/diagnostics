@@ -1,1 +1,1 @@
-const API_URL = "https://punctb-service.ru/api/v1"
+const API_URL = "https://vds.punkt-b.pro/api/v1"
