@@ -190,7 +190,7 @@ $("#label-policy").on("click tap", () => {
 
 // Клик по политике
 $("#label-policy span").on("click tap", () => {
-    window.open("../diagnostic-policy", "_blank")
+    window.open(POLICY_URL, "_blank")
 })
 
 
@@ -430,5 +430,5 @@ $("#button-end").on("click tap", () => {
 
 
 $(".question-open__section-content h3 span").on("click tap", () => {
-    window.open(`https://punkt-b.pro/43-professions/all-professions`, "_blank")
+    window.open(PROFESSIONS_ALL_URL, "_blank")
 })

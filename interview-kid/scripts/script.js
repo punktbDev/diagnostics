@@ -34,7 +34,7 @@
 
     // Клик по политике
     $("#label-policy span").on("click tap", () => {
-        window.open("../diagnostic-policy", "_blank")
+        window.open(POLICY_URL, "_blank")
     })
 
 
