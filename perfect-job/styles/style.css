@@ -484,7 +484,8 @@ input[type="email"] {
     margin-right: 20px;
 }
 
-#audio-play.play {
+#audio-play.play img {
+    height: 28px;
     content: url("https://sun9-61.userapi.com/impg/WQpTXyzAWt4YZQVkQ6DsNowrzfaUwUPALOm68g/76RoXnEKYfs.jpg?size=21x34&quality=96&sign=3b180872d11835e802b240ba5b2ebfa1&type=album");
 }
 
