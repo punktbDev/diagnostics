@@ -236,5 +236,5 @@
 // Замена видео на вк-видео
 if (URLParams.vk !== undefined) {
     $(".iframe-wrapper iframe").remove()
-    $(".iframe-wrapper").prepend(`<iframe src="https://vk.com/video_ext.php?oid=-226977867&id=456239018&hash=8e391e16f526dc9d" width="426" height="240" allow="autoplay; encrypted-media; fullscreen; picture-in-picture; screen-wake-lock;" frameborder="0" allowfullscreen></iframe>`)
+    $(".iframe-wrapper").prepend(`<iframe src="https://vkvideo.ru/video_ext.php?oid=-123324876&id=456239378&hd=3&hash=29463adaece23649" width="1280" height="720" allow="autoplay; encrypted-media; fullscreen; picture-in-picture; screen-wake-lock;" frameborder="0" allowfullscreen></iframe>`)
 }
