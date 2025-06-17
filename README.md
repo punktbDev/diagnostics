@@ -1,7 +1,10 @@
 ## Домены
 
-- Vercel: https://testing-punkt-b.vercel.app
-- Пункт Б: https://diag.punkt-b.pro
+Новый github-pages
+- Пункт Б: https://testing-punkt-b.vercel.app
+
+(Перестал работать в рф)
+- Vercel: https://diag.punkt-b.pro
 
 ## Страницы
 
