@@ -28,7 +28,7 @@
 | Диагностика "8 кадров (Взрослая версия)"               | 12  | /8-frames.html                      |
 | Диагностика "Исследование ценностей"                   | 13  | /exploring-values.html              |
 | Диагностика "Учебная мотивация"                        | 14  | /learning-motivation.html           |
-| Диагностики жизнестойкости (WIP)                       | 15  | /viability.html                     |
+| Диагностика жизнестойкости (WIP)                       | 15  | /viability.html                     |
 | Диагностики "Экспресс — оценка уровня выгорания" (WIP) | 16  | /burnout-assessment.html            |
 | Диагностика выгорания по Маслач (WIP)                  | 17  | /maslach-burnout-assessment.html    |
 | Конец тестирования                                     |     | /testing-end.html                   |
