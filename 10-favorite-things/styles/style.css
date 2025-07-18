@@ -228,62 +228,6 @@ input[type="email"] {
 }
 
 
-/* Обработка персональной информации */
-.form-checkbox {
-    display: flex;
-    align-items: flex-start;
-    gap: 12px;
-
-    margin-bottom: 20px;
-}
-
-#label-policy {
-    width: calc(100% - 12px - 15px);
-    font-size: 12px;
-    line-height: 112%;
-    cursor: pointer;
-}
-
-#label-policy span {
-    font-size: 12px;
-    line-height: 112%;
-    cursor: pointer;
-    display: inline;
-
-    font-weight: 500;
-    color: var(--h-title);
-}
-
-@media (hover: hover) {
-    #label-policy span:hover {
-        text-decoration: underline;
-    }
-}
-
-@media (hover: none) {
-    #label-policy span {
-        text-decoration: underline;
-    }
-}
-
-#policy {
-    width: 15px;
-    height: 15px;
-    box-sizing: border-box;
-    cursor: pointer;
-
-    border-radius: 3px;
-    border: 1px solid var(--border);
-    background-color: #ffffff;
-
-}
-
-#policy.checked {
-    background-color: var(--border);
-}
-
-
-
 .article-content {
     height: auto;
     flex-direction: column;

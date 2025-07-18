@@ -380,27 +380,6 @@
     input[type="email"] {
         margin-bottom: 8px;
     }
-
-
-    /* Обработка персональной информации */
-    .form-checkbox {
-        gap: 8px;
-
-        margin-bottom: 8px;
-    }
-
-    #label-policy {
-        width: calc(100% - 8px - 8px);
-    }
-
-    #label-policy, #label-policy span {
-        font-size: 10px;
-    }
-
-    #policy {
-        width: 15px;
-        height: 15px;
-    }
 }
 
 @media screen and (max-width: 550px) {

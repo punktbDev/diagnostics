@@ -97,5 +97,20 @@
             localStorage.removeItem("questionsHash_learningMotivation")
             localStorage.removeItem("questionsHash_learningMotivationGender")
         }
+
+        // Диагностика жизнестойкости
+        if (URLParams["test-name"] === "viability") {
+            localStorage.removeItem("questionsHash_viability")
+        }
+
+        // 10 вопросов
+        if (URLParams["test-name"] === "10Questions") {
+            localStorage.removeItem("questionsHash_10Questions")
+        }
+
+        // Я на работе
+        if (URLParams["test-name"] === "imAtWork") {
+            localStorage.removeItem("questionsHash_imAtWork")
+        }
     }
 }())

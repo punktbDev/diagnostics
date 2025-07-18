@@ -1,9 +1,11 @@
 ## Домены
 
 Новый github-pages
+
 - Пункт Б: https://diag.punkt-b.pro
 
 (Перестал работать в рф)
+
 - Vercel: https://testing-punkt-b.vercel.app
 
 ## Страницы
@@ -28,8 +30,8 @@
 | Диагностика "8 кадров (Взрослая версия)"               | 12  | /8-frames.html                      |
 | Диагностика "Исследование ценностей"                   | 13  | /exploring-values.html              |
 | Диагностика "Учебная мотивация"                        | 14  | /learning-motivation.html           |
-| Диагностика жизнестойкости (WIP)                       | 15  | /viability.html                     |
-| Диагностики "Экспресс — оценка уровня выгорания" (WIP) | 16  | /burnout-assessment.html            |
-| Диагностика выгорания по Маслач (WIP)                  | 17  | /maslach-burnout-assessment.html    |
+| Диагностика жизнестойкости                             | 15  | /viability.html                     |
+| Диагностики "10 вопросов"                              | 16  | /10-questions.html                  |
+| Диагностика "Я на работе"                              | 17  | /im-at-work.html                    |
 | Конец тестирования                                     |     | /testing-end.html                   |
 | Политика конфиденциальности                            |     | /policy.html                        |

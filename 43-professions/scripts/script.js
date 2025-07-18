@@ -1,6 +1,6 @@
 // Первая буква заглавная
 function FirstUpperCase(str) {
-    // Если есть хотябы один символ
+    // Если есть хотя бы один символ
     if (str.length !== 0) {
         return str[0].toUpperCase() + str.slice(1);
     }
@@ -36,7 +36,7 @@ function renderQuestion() {
         $(".question__section-content").addClass("hidden")
         $(".question-open__section-content").removeClass("hidden")
 
-        // Кнопка Далее заменятеся на Завершить
+        // Кнопка Далее заменяется на Завершить
         $("#button-next").addClass("hidden")
         $("#button-end").removeClass("hidden")
         return
@@ -60,7 +60,7 @@ function renderQuestion() {
     $(".question__section-content").removeClass("hidden")
     $(".question-open__section-content").addClass("hidden")
 
-    // Кнопка Завершить заменятеся на Далее
+    // Кнопка Завершить заменяется на Далее
     $("#button-next").removeClass("hidden")
     $("#button-end").addClass("hidden")
 
@@ -90,29 +90,16 @@ function renderQuestion() {
 }
 
 
-
-
 let questionCounter = 0 // Текущий вопрос
 
-// Если информация была взята из хэша, то перебираем пока не найдем последний отвеченый вопрос
+// Если информация была взята из хэша, то перебираем пока не найдем последний отвеченный вопрос
 if (isQuestionsHash) {
     for (element of questions) {
         if (element.weight1 || element.weight2) {
-            questionCounter = element.id + 1 // Записываем в текущий вопрос следущий вопрос после последнего ответа
+            questionCounter = element.id + 1 // Записываем в текущий вопрос следующий вопрос после последнего ответа
         }
     }
     renderQuestion()
-}
-
-
-// Если пользователь валидно заполнил форму и данные сохранились в хэш, то заполняем поля
-let hashUserFormData = JSON.parse(localStorage.getItem("userFormData"))
-if (hashUserFormData) {
-    $("#form-name").val(hashUserFormData.formName)
-    $("#form-phone").val(hashUserFormData.formPhone)
-    $("#form-email").val(hashUserFormData.formEmail)
-    // Активируем галочку
-    $("#policy").toggleClass("checked")
 }
 
 
@@ -135,7 +122,7 @@ $("#button-next").on("click tap", () => {
 })
 
 
-// Кнопка первого варивнта ответа
+// Кнопка первого варианта ответа
 $("#question-1").on("click tap", () => {
     // Ставим вес ответа в первый и ставим флаг
     questions[questionCounter].weight1 = 1
@@ -144,146 +131,25 @@ $("#question-1").on("click tap", () => {
     $("#question-mark-2").removeClass("checked")
 
     $("#button-next").removeAttr("disabled")
-    // $("#button-next").trigger("click") // Автопереключение вопроса при выборе ответа
+    // $("#button-next").trigger("click") // Авто переключение вопроса при выборе ответа
 
     // Записываем ответы в хеш
     localStorage.setItem("questionsHash_43Professions", JSON.stringify(questions))
 })
 
-// Кнопка второго варивнта ответа
+// Кнопка второго варианта ответа
 $("#question-2").on("click tap", () => {
-    // Ставим вес ответа во втрой и ставим флаг
+    // Ставим вес ответа во второй и ставим флаг
     questions[questionCounter].weight1 = 0
     questions[questionCounter].weight2 = 1
     $("#question-mark-1").removeClass("checked")
     $("#question-mark-2").addClass("checked")
 
     $("#button-next").removeAttr("disabled")
-    // $("#button-next").trigger("click") // Автопереключение вопроса при выборе ответа
+    // $("#button-next").trigger("click") // Авто переключение вопроса при выборе ответа
 
     // Записываем ответы в хеш
     localStorage.setItem("questionsHash_43Professions", JSON.stringify(questions))
-})
-
-$("#form-name").change(() => { // Удаление лишних пробелов
-    $("#form-name").val($("#form-name").val().replace(/ +/g, ' ').trim())
-})
-
-$("#form-phone").change(() => { // Удаление пробелов
-    $("#form-phone").val($("#form-phone").val().replace(/ /g,''))
-})
-
-$("#form-email").change(() => { // Удаление пробелов
-    $("#form-email").val($("#form-email").val().replace(/ /g,''))
-})
-
-
-// Галочка 
-$("#policy").on("click tap", () => {
-    $("#policy").toggleClass("checked")
-})
-
-// Клик тексту после галочки
-$("#label-policy").on("click tap", () => {
-    $("#policy").addClass("checked")
-})
-
-// Клик по политике
-$("#label-policy span").on("click tap", () => {
-    window.open(POLICY_URL, "_blank")
-})
-
-
-// Ивент submit у формы входа
-const form = document.querySelector('form')
-form.addEventListener('submit', (event) => {
-    // Отключение базового перехода
-    event.preventDefault()
-
-    // Отключаем кнопку на 2 секунды
-    $("#submit-form").attr("disabled", "disabled")
-    setTimeout(() => {
-        $("#submit-form").removeAttr("disabled")
-    }, 2000)
-
-
-    // Получаем поля из фомы
-    const formData = new FormData(form)
-    const formName = formData.get("form-name")
-    const formPhone = formData.get("form-phone")
-    const formEmail = formData.get("form-email")
-    
-    // В поле ФИО должно быть ровно 3 слова
-    if (formName.split(" ").length !== 3) {
-        inputError("#form-name")
-
-        // Ставим текст ошибки
-        $("#form-error").text("Неверный формат ФИО")
-        $("#form-error").addClass("show")
-        setTimeout(() => {
-            $("#form-error").removeClass("show")
-        }, 2000)
-        return
-    }
-
-    // Проверка поля Телефона на регулярном выражении
-    let rePhone = /^[\d\+][\d\(\)\ -]{9,14}\d$/
-    if (!rePhone.test(formPhone)) {
-        inputError("#form-phone")
-        // Ставим текст ошибки
-        $("#form-error").text("Неверный номер телефона")
-        $("#form-error").addClass("show")
-        setTimeout(() => {
-            $("#form-error").removeClass("show")
-        }, 2000)
-        return
-    }
-
-    // Проверка поля Почты на регулярном выражении
-    let reEmail = /^[\w-\.]+@[\w-]+\.[a-z]{2,4}$/i
-    if (!reEmail.test(formEmail)) {
-        inputError("#form-email")
-        // Ставим текст ошибки
-        $("#form-error").text("Неверный email")
-        $("#form-error").addClass("show")
-        setTimeout(() => {
-            $("#form-error").removeClass("show")
-        }, 2000)
-        return
-    }
-
-    if (!$("#policy").hasClass("checked")) {
-        // Ставим текст ошибки
-        $("#form-error").text("Отметьте поле")
-        $("#form-error").addClass("show")
-        setTimeout(() => {
-            $("#form-error").removeClass("show")
-        }, 2000)
-        return
-    }
-
-
-    $("#form-aside").addClass("hidden")
-    $("#form-section").addClass("hidden")
-    $("#section-title").removeClass("hidden")
-    $("#section-instruction").removeClass("hidden")
-    $("#top-right-figure").removeClass("hidden")
-    $("#bottom-left-figure").removeClass("hidden")
-
-    // Класс для корректного отображения
-    $("article").addClass("article-content")
-
-
-    // Сохраняем информацию в хэш
-    let userFormData = {
-        formName: formName,
-        formPhone: formPhone,
-        formEmail: formEmail,
-    }
-
-    localStorage.setItem("userFormData", JSON.stringify(userFormData))
-
-    // Когда заполнили все поля и нажали "Далее", то рендерит Правила
 })
 
 
@@ -392,7 +258,6 @@ $("#button-end").on("click tap", () => {
     
     // Массив который отправиться
     let sendData = {
-    // id: Установиться в google scripts
         "manager_id": parseInt(URLParams["manager-id"]),
         "name": userFormData.formName,
         "phone": userFormData.formPhone,
@@ -405,6 +270,8 @@ $("#button-end").on("click tap", () => {
             "date": Date.now() // Дата текущего прохождения
         },
         "in_archive": false,
+        "is_phone_adult": userFormData.formPhoneParents,
+        "contact_permission": true,
         "date": Date.now() // Дата последней активности
     }
     

@@ -13,6 +13,7 @@
 
     <link rel="stylesheet" href="./global/global.css">
     <link rel="stylesheet" href="./my-needs-kid/styles/style.css">
+    <link rel="stylesheet" href="./my-needs-kid/styles/form-checkbox.css">
     <link rel="stylesheet" href="./my-needs-kid/styles/phone.css">
 </head>
 <body>
@@ -67,6 +68,11 @@
                 <label class="p1" for="form-phone">Телефон</label>
                 <input class="p1" type="tel" id="form-phone" name="form-phone" maxlength="20" required>
 
+                <div class="form-checkbox">
+                    <div id="parents-phone"></div>
+                    <label id="label-parents-phone" for="parents-phone" class="p1">Телефон родителя</label>
+                </div>
+
                 <label class="p1" for="form-email">Email</label>
                 <input class="p1" type="email" id="form-email" name="form-email" maxlength="100" required>
 
@@ -76,7 +82,6 @@
                     <div id="policy"></div>
                     <label id="label-policy" for="policy" class="p1">Я принимаю условия <span>Пользовательского соглашения</span> и даю свое <span>согласие на обработку персональных данных</span> в соответствии с <span>Политикой</span>.</label>
                 </div>
-                
 
                 <button class="p1" type="submit" id="submit-form">Далее</button>
             </form>
@@ -194,6 +199,7 @@
 
     <script src="./global/config.js"></script>
     <script src="./global/inputError.js"></script>
+    <script src="./my-needs-kid/scripts/form.js"></script>
     <script src="./my-needs-kid/scripts/script.js"></script>
 </body>
 </html>
